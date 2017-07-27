@@ -82,7 +82,9 @@ function addActor(){
 6. Now that you've added a "boxoffice" property, subtract "budget" from "property" and return the difference. This number is the amount lost by the studio in making the film. Return the loss.
 */
 function getLosses(){
-    // Your answer here:
+    let loss = film.boxoffice - film.budget;
+
+    return loss;
 }
 
 
@@ -101,7 +103,11 @@ let letterVals = [ "v", "x", "r", "f", "p" ];
 
 function interleave(){
     let vals = [];
-    // Your answer here:
+    for (var i = 0; i < 5; i++) {
+      vals.push(letterVals[i] + numberVals[i]);
+    }
+
+    return vals;
 }
 
 
@@ -118,5 +124,10 @@ let second = [ "think", "stand", "cheese", "break", "numinous", "mouse", "close"
 
 function union(){
     let same = [];
-    // Your answer here:
+    for (var i = 0; i < 8; i++) {
+        if(first[i] === second[i]){
+            same.push(first[i]);
+        }
+    }
+    return same;
 }
